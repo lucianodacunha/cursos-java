@@ -1,0 +1,1 @@
+UPDATE CLIENTES SET EMAIL = 'antonio@gmail.com' WHERE ID = 4;
