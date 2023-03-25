@@ -15,13 +15,12 @@ import model.Project;
  */
 public class ProjectDialogScreen extends javax.swing.JDialog {
 
-    ProjectController controller;    
-    
-    
+    ProjectController controller;
+
     public ProjectDialogScreen(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+
         controller = new ProjectController();
     }
 
@@ -146,13 +145,19 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabelToolbarSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelToolbarSaveMouseClicked
-        Project project = new Project();
+        try {
+            Project project = new Project();
+
+            project.setName(jTextFieldName.getText());
+            project.setDescription(jTextAreaDescription.getText());
+
+            controller.save(project);
+            JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
         
-        project.setName(jTextFieldName.getText());
-        project.setDescription(jTextAreaDescription.getText());
-        
-        controller.save(project);
-        JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+        this.dispose();
     }//GEN-LAST:event_jLabelToolbarSaveMouseClicked
 
     /**
@@ -166,7 +171,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Java swing".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
