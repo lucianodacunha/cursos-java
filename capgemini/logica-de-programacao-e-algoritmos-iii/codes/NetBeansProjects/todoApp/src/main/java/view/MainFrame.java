@@ -5,6 +5,9 @@
  */
 package view;
 
+import java.awt.Color;
+import java.awt.Font;
+
 /**
  *
  * @author luciano
@@ -16,6 +19,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        decorateTableTask(); 
     }
 
     /**
@@ -35,8 +39,8 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelToolbarTitle = new javax.swing.JLabel();
         jLabelToolbarSubtitle = new javax.swing.JLabel();
         jPanelTasks1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPaneTasks = new javax.swing.JScrollPane();
+        jTableTasks = new javax.swing.JTable();
         jPanelProjectsList = new javax.swing.JPanel();
         jScrollPane1Projects = new javax.swing.JScrollPane();
         jListProjects = new javax.swing.JList<>();
@@ -125,7 +129,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelTasks1.setBackground(new java.awt.Color(255, 255, 255));
         jPanelTasks1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -151,21 +155,21 @@ public class MainFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setRowHeight(40);
-        jTable1.setSelectionBackground(new java.awt.Color(0, 102, 204));
-        jTable1.setShowHorizontalLines(false);
-        jTable1.setShowVerticalLines(false);
-        jScrollPane1.setViewportView(jTable1);
+        jTableTasks.setRowHeight(40);
+        jTableTasks.setSelectionBackground(new java.awt.Color(0, 102, 204));
+        jTableTasks.setShowHorizontalLines(false);
+        jTableTasks.setShowVerticalLines(false);
+        jScrollPaneTasks.setViewportView(jTableTasks);
 
         javax.swing.GroupLayout jPanelTasks1Layout = new javax.swing.GroupLayout(jPanelTasks1);
         jPanelTasks1.setLayout(jPanelTasks1Layout);
         jPanelTasks1Layout.setHorizontalGroup(
             jPanelTasks1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
+            .addComponent(jScrollPaneTasks, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
         );
         jPanelTasks1Layout.setVerticalGroup(
             jPanelTasks1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+            .addComponent(jScrollPaneTasks, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
         );
 
         jPanelProjectsList.setBackground(new java.awt.Color(255, 255, 255));
@@ -289,7 +293,7 @@ public class MainFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Java swing".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -330,8 +334,20 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelTasks;
     private javax.swing.JPanel jPanelTasks1;
     private javax.swing.JPanel jPanelToolbar;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane1Projects;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPaneTasks;
+    private javax.swing.JTable jTableTasks;
     // End of variables declaration//GEN-END:variables
+
+    public void decorateTableTask(){
+        // Customizando header da tableTasks
+        jTableTasks.getTableHeader().setFont(new Font("Dialog", Font.BOLD, 12));
+        jTableTasks.getTableHeader().setBackground(new Color(0,102,204));
+        jTableTasks.getTableHeader().setForeground(Color.white);
+        
+        jTableTasks.setAutoCreateRowSorter(true);
+        
+
+    }
+
 }
