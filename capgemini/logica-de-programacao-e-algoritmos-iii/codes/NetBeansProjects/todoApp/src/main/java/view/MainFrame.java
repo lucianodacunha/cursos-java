@@ -14,6 +14,8 @@ import java.awt.event.WindowEvent;
 import java.util.List;
 import javax.swing.DefaultListModel;
 import model.Project;
+import model.Task;
+import util.TaskTableModel;
 
 /**
  *
@@ -23,24 +25,34 @@ public class MainFrame extends javax.swing.JFrame {
 
     ProjectController projectController;
     TaskController taskController;    
-    DefaultListModel projectModel;
+    DefaultListModel projectsModel;
+    TaskTableModel taskModel;
     
     public void initComponentsModel(){
-        projectModel = new DefaultListModel();
+        projectsModel = new DefaultListModel();
         loadProjects();
+        
+        taskModel = new TaskTableModel();
+        jTableTasks.setModel(taskModel);
+        loadTasks(7);
+    }
+    
+    public void loadTasks(int idProject){
+        List<Task> tasks = taskController.getAll(idProject);
+        taskModel.setTasks(tasks);
     }
     
     public void loadProjects(){
         // projectModel = new DefaultListModel<>();
         List<Project> projects = projectController.getAll();
         
-        projectModel.clear();
+        projectsModel.clear();
         
         for(Project project : projects){
-            projectModel.addElement(project);
+            projectsModel.addElement(project);
         }
         
-        jListProjects.setModel(projectModel);
+        jListProjects.setModel(projectsModel);
     }
     
     public void initDataController(){
@@ -192,6 +204,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jTableTasks.setRowHeight(40);
         jTableTasks.setSelectionBackground(new java.awt.Color(0, 102, 204));
+        jTableTasks.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableTasks.setShowHorizontalLines(false);
         jTableTasks.setShowVerticalLines(false);
         jScrollPaneTasks.setViewportView(jTableTasks);

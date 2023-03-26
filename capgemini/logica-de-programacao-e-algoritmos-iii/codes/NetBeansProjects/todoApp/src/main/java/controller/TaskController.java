@@ -135,7 +135,7 @@ public class TaskController {
                 task.setName(rs.getString("name"));
                 task.setDescription(rs.getString("description"));
                 task.setNotes(rs.getString("notes"));
-                task.setIsCompleted(rs.getBoolean("isCompleted"));
+                task.setIsCompleted(rs.getBoolean("completed"));
                 task.setDeadline(sdf.parse(rs.getString("deadline")));
                 task.setCreatedAt(sdf.parse(rs.getString("createdAt")));
                 task.setUpdatedAt(sdf.parse(rs.getString("updatedAt")));   
