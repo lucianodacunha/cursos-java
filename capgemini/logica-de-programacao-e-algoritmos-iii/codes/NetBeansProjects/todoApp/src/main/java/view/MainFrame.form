@@ -199,12 +199,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPaneTasks" alignment="0" max="32767" attributes="0"/>
+              <Component id="jScrollPaneTasks" min="-2" pref="539" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPaneTasks" alignment="0" pref="473" max="32767" attributes="0"/>
+              <Component id="jScrollPaneTasks" min="-2" pref="473" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -234,6 +234,9 @@
                 <Property name="showHorizontalLines" type="boolean" value="false"/>
                 <Property name="showVerticalLines" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTableTasksMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -284,6 +287,9 @@
                   <Color blue="cc" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jListProjectsMouseClicked"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>

@@ -68,6 +68,9 @@ public class TaskDialogScreen extends javax.swing.JDialog {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelSaveMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelSaveMouseEntered(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanelToolbarLayout = new javax.swing.GroupLayout(jPanelToolbar);
@@ -181,7 +184,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         try {
             Task task = new Task();
             
-            task.setIdProject(7);
+            task.setIdProject(this.project.getId());
             
             task.setName(jTextFieldName.getText());
             task.setDescription(jTextAreaDescription.getText());
@@ -191,7 +194,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
             Date deadline = null;
             deadline = sdf.parse(jFormattedTextFieldDeadline.getText());
             task.setDeadline(deadline);
-            controller.save(task);
+            this.controller.save(task);
             JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
             
         } catch (Exception e) {
@@ -199,6 +202,10 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         }
         this.dispose();
     }//GEN-LAST:event_jLabelSaveMouseClicked
+
+    private void jLabelSaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSaveMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelSaveMouseEntered
 
     
     /**

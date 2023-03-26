@@ -93,7 +93,7 @@ public class TaskController {
     }
     
     // Aula 11.b
-    public void removeById(int taskId) throws SQLException{
+    public void removeById(int taskId) {
         String sql = "DELETE FROM TASKS WHERE id = ?";
         
         Connection conn = null;
