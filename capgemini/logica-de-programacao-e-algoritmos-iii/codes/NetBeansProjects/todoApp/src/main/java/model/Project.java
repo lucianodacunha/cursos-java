@@ -82,11 +82,12 @@ public class Project {
 
     @Override
     public String toString() {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-        return "Project{" + "id=" + id + ", name=" + name + 
-                ", description=" + description + ", createdAt=" + 
-                sdf.format(createdAt) + ", updatedAt=" + sdf.format(updatedAt) + '}';
+        return String.format("%s", this.getName());
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//
+//        return "Project{" + "id=" + id + ", name=" + name + 
+//                ", description=" + description + ", createdAt=" + 
+//                sdf.format(createdAt) + ", updatedAt=" + sdf.format(updatedAt) + '}';
     }  
     
 }
