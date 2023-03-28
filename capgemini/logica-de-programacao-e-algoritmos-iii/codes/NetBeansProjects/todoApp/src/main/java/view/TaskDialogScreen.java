@@ -182,25 +182,32 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         
         try {
-            Task task = new Task();
-            
-            task.setIdProject(this.project.getId());
-            
-            task.setName(jTextFieldName.getText());
-            task.setDescription(jTextAreaDescription.getText());
-            task.setNotes(jTextAreaNotes.getText());
-            task.setIsCompleted(false);            
-            
-            Date deadline = null;
-            deadline = sdf.parse(jFormattedTextFieldDeadline.getText());
-            task.setDeadline(deadline);
-            this.controller.save(task);
-            JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
+            if (jTextFieldName.getText().equals("") ||
+                    jFormattedTextFieldDeadline.getText().isEmpty()){
+                JOptionPane.showMessageDialog(rootPane, "Preencha todos " +
+                        "os campos obrigatórios");
+            } else {
+                Task task = new Task();
+
+                task.setIdProject(this.project.getId());
+
+                task.setName(jTextFieldName.getText());
+                task.setDescription(jTextAreaDescription.getText());
+                task.setNotes(jTextAreaNotes.getText());
+                task.setIsCompleted(false);            
+
+                Date deadline = null;
+                deadline = sdf.parse(jFormattedTextFieldDeadline.getText());
+                task.setDeadline(deadline);
+                this.controller.save(task);
+                JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
+                this.dispose();
+            }
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
-        this.dispose();
+
     }//GEN-LAST:event_jLabelSaveMouseClicked
 
     private void jLabelSaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSaveMouseEntered

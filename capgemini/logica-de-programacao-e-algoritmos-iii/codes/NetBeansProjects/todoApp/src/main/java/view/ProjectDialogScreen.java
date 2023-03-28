@@ -146,18 +146,25 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
 
     private void jLabelToolbarSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelToolbarSaveMouseClicked
         try {
-            Project project = new Project();
+            if (!jTextFieldName.getText().equals("")){
+                Project project = new Project();
 
-            project.setName(jTextFieldName.getText());
-            project.setDescription(jTextAreaDescription.getText());
+                project.setName(jTextFieldName.getText());
+                project.setDescription(jTextAreaDescription.getText());
 
-            controller.save(project);
-            JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+                controller.save(project);
+                JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Obrigatório o " +
+                        "preenchimento do nome.");
+            }
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
         
-        this.dispose();
+        
     }//GEN-LAST:event_jLabelToolbarSaveMouseClicked
 
     /**
