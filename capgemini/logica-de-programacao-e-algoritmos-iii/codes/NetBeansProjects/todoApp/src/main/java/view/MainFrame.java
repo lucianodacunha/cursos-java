@@ -15,6 +15,7 @@ import java.util.List;
 import javax.swing.DefaultListModel;
 import model.Project;
 import model.Task;
+import util.DeadlineColumnCellRenderer;
 import util.TaskTableModel;
 
 /**
@@ -70,11 +71,11 @@ public class MainFrame extends javax.swing.JFrame {
     
     public MainFrame() {
         initComponents();
-        decorateTableTask(); 
         
         initDataController();
         initComponentsModel();
         
+        decorateTableTask();         
     }
 
     /**
@@ -500,6 +501,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         jTableTasks.setAutoCreateRowSorter(true);
         
+        jTableTasks.getColumnModel().getColumn(2).setCellRenderer(new DeadlineColumnCellRenderer());        
+        jTableTasks.getColumnModel().getColumn(4).setCellRenderer(new ButtonColumnCellRenderer("edit"));
+        jTableTasks.getColumnModel().getColumn(5).setCellRenderer(new ButtonColumnCellRenderer("delete"));
 
     }
 
