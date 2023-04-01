@@ -1,6 +1,7 @@
 .metadata
 target/**
 *.jar
+!AppConta.jar
 *.war
 *.ear
 *.class
@@ -27,7 +28,6 @@ local.properties
 # Locally stored "Eclipse launch configurations"
 *.launch
 bin/
-libs/
 material/
 db/
 /capgemini/logica-de-programacao-e-algoritmos-iii/codes/NetBeansProjects/PrimeiraInterfaceGrafica/.gradle/
