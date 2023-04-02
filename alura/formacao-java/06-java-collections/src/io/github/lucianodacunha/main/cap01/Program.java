@@ -7,6 +7,11 @@ import java.util.Collections;
 
 import com.github.javafaker.Faker;
 
+/**
+ * Trabalhando com ArrayList
+ * @author luciano
+ *
+ */
 public class Program {
 	public static void main(String[] args) {
 		

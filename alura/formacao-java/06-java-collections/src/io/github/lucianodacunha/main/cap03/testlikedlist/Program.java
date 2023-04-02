@@ -1,4 +1,4 @@
-package io.github.lucianodacunha.main.cap02.testlikedlist;
+package io.github.lucianodacunha.main.cap03.testlikedlist;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
