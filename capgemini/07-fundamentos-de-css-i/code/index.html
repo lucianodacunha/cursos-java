@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            font-family: Arial, sans-serif;
+            color: #FFAA33;
+        }
+        html {
+            background-color: #fff;
+            height: 100vh;
+            background-image: url('./img/bg2.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .titulo-aula {
+
+        }
+        .texto-azul {
+            color: blue;
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .texto-verde {
+            color: green;
+        }
+        .texto-vermelho {
+            color: red;
+            font-style: italic;
+            letter-spacing: 0.2rem;
+        }
+        .texto-destaque {
+            font-weight: bold;
+        }
+        .texto-alto {
+            font-variant: small-caps;
+        }
+        p {
+            text-indent: 2rem;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        main {
+            display: none;
+        }
+        .caixa-1 {
+            border: 10px solid black;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            color: #000;
+            font-weight: bold;
+            padding: 40px 40px;
+
+        }
+        .caixa-2 {
+            border: 10px solid black;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            color: #000;
+            font-weight: bold;
+            padding: 40px 40px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aula de CSS</h1>
+    </header>
+    <main>
+        <article>
+            <h2 id="titulo-1" class="titulo-aula texto-azul">Primeira Aula</h2>
+            <p class="texto-azul">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iste ea enim vel molestias, debitis doloremque impedit aliquid laborum eos voluptatum dicta sit nemo, at repudiandae voluptatibus ducimus ipsa totam adipisci illum, similique quo eum dolorum itaque! Eos facilis explicabo consectetur fuga quae excepturi sed harum animi impedit adipisci debitis reiciendis error modi repellat architecto ratione, minima libero similique numquam soluta nihil molestiae voluptas cupiditate a? Quidem quos perspiciatis ullam rem molestias assumenda tenetur, enim alias totam, <span class="texto-vermelho texto-destaque">quisquam nemo, dolor ab facilis deserunt sunt a mollitia qui ad quas</span>. Sit, esse odit animi explicabo molestiae non natus minima magnam quidem aspernatur hic corporis eaque voluptate veritatis illum rerum vero repudiandae reprehenderit voluptates fugit. Ducimus nemo fugiat error doloremque maiores corrupti non laborum. Voluptatem velit laudantium officiis obcaecati aut labore quas vel eveniet ipsam asperiores quasi, pariatur illum, placeat voluptatum laboriosam sequi fugit amet esse corrupti dignissimos? Itaque dolore enim eius?</p>
+            <h2 id="titulo-2" class="titulo-aula texto-verde" style="text-decoration:underline">Segunda Aula</h2>
+            <p class="texto-verde">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iste ea enim vel molestias, debitis doloremque impedit aliquid laborum eos voluptatum dicta sit nemo, at repudiandae <span classp="texto-alto">voluptatibus ducimus </span>ipsa totam adipisci illum, similique quo eum dolorum itaque! Eos facilis explicabo consectetur fuga quae excepturi sed harum animi impedit adipisci debitis reiciendis error <span class="texto-vermelho">modi repellat architecto ratione, minima libero similique numquam soluta nihil molestiae voluptas cupiditate a? </span>Quidem quos perspiciatis ullam rem molestias assumenda tenetur, enim alias totam, quisquam nemo, dolor ab facilis deserunt sunt a mollitia qui ad quas. Sit, esse odit animi explicabo molestiae non natus minima magnam quidem aspernatur hic corporis eaque voluptate veritatis illum rerum vero repudiandae reprehenderit voluptates fugit. Ducimus nemo fugiat error doloremque maiores corrupti non laborum. Voluptatem velit laudantium officiis obcaecati aut labore quas vel eveniet ipsam asperiores quasi, pariatur illum, placeat voluptatum laboriosam sequi fugit amet esse corrupti dignissimos? 
+            <a href="#">Itaque dolore enim eius?</a>
+            </p>
+        </article>
+        </main>
+        <section class="caixas">
+            <div class="caixa-1">texto</div>
+            <hr>
+            <div class="caixa-2">texto</div>
+        </section>
+    </body>
+    </html>
