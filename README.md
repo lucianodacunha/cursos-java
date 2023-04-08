@@ -13,3 +13,5 @@
 - [15 Tips to Become a Java Expert!](https://dev.to/weder96/15-tips-to-become-a-java-expert-1acj#section-03)
 - [Configuring SQLite JDBC driver for NetBeans](http://users.csc.calpoly.edu/~jdalbey/308/Resources/HOWTO_NetBeans_SQLite.html)
 - [SQLite JDBC](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.41.0.0)
+- [sqlite jdbc Eclipse database relative path](https://stackoverflow.com/questions/31611785/sqlite-jdbc-eclipse-database-relative-path)
+- [How to set up SQLite with JDBC in Eclipse on Windows](https://shanemcd.org/2020/01/24/how-to-set-up-sqlite-with-jdbc-in-eclipse-on-windows/)
