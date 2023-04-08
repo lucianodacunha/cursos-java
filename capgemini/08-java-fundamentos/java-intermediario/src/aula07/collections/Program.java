@@ -22,16 +22,17 @@ public class Program {
 						faker.educator().course(), "1234"));
 			s.get(i).setGrades(
 					new double[] {
-							faker.number().randomDouble(2, 0, 10),
-							faker.number().randomDouble(2, 0, 10),
-							faker.number().randomDouble(2, 0, 10),
-							faker.number().randomDouble(2, 0, 10)
+							faker.number().randomDouble(2, 4, 10),
+							faker.number().randomDouble(2, 4, 10),
+							faker.number().randomDouble(2, 4, 10),
+							faker.number().randomDouble(2, 4, 10)
 					});
 			s.get(i).calcStatus();
 		}
 		
+		System.out.printf("Students: %d\n", s.size());
 		s.forEach(student -> {System.out.println(student);});
-		
+	
 	}
 }
 
@@ -116,7 +117,7 @@ class Student extends Person implements Authenticable {
 		if (average >= 7.0) {
 			this.status = Status.APROVADO;
 		} else {
-			this.status = status.REPROVADO;
+			this.status = Status.REPROVADO;
 		}
 	}
 	
@@ -129,6 +130,8 @@ class Student extends Person implements Authenticable {
 	}	
 	
 	public Status getStatus() {
+		if (this.status == null)
+			this.calcStatus();
 		return this.status;
 	}
 
