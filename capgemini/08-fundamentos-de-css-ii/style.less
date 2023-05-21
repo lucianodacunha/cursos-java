@@ -1,0 +1,47 @@
+// variáveis
+@azul: blue;
+@vermelho: red;
+@verde: green;
+@amarelo: brown;
+
+// functions
+@selectors: principal, secundaria;
+
+each(@selectors, {
+    .secao-@{value} h2 {
+        color: @amarelo;
+    }
+});
+
+h1 {
+    color: @vermelho;
+}
+
+// hierarquias
+.secao-principal {
+    .paragrafo {
+        color: @verde;
+    }
+}
+
+.secao-secundaria {
+    .paragrafo {
+        color: @azul;
+    }
+}
+
+// mixins 
+.div-um {
+    .configuracao-das-divs();
+}
+
+.div-dois {
+    .configuracao-das-divs();
+}
+
+.configuracao-das-divs{
+    padding: 5px 5px;
+    background-color: darkkhaki;
+    color: darkgreen;
+    font-family: Arial, sans-serif;
+}
