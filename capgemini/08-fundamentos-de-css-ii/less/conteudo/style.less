@@ -44,4 +44,24 @@ h1 {
     background-color: darkkhaki;
     color: darkgreen;
     font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+// condicionais
+
+.last {
+    .cond('s');
+}
+
+.cond(@char){
+    & when(@char = 's'){
+        color: @vermelho;
+    }
+}
+
+// operadores matemáticos
+
+@tamanho_da_font: 1.5rem;
+.last2 {
+    font-size: @tamanho_da_font * 1.1;
 }
