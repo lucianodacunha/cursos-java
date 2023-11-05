@@ -1,0 +1,6 @@
+[submodule "spring-boot-3-documente-teste-e-prepare-uma-api-para-o-deploy"]
+	path = spring-boot-3-documente-teste-e-prepare-uma-api-para-o-deploy
+	url = git@github.com:lucianodacunha/spring-boot-3-documente-teste-e-prepare-uma-api-para-o-deploy.git
+[submodule "java-persistencia-de-dados-e-consultas-com-spring-data-jpa"]
+	path = java-persistencia-de-dados-e-consultas-com-spring-data-jpa
+	url = git@github.com:lucianodacunha/java-persistencia-de-dados-e-consultas-com-spring-data-jpa.git
