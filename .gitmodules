@@ -4,3 +4,9 @@
 [submodule "java-persistencia-de-dados-e-consultas-com-spring-data-jpa"]
 	path = java-persistencia-de-dados-e-consultas-com-spring-data-jpa
 	url = git@github.com:lucianodacunha/java-persistencia-de-dados-e-consultas-com-spring-data-jpa.git
+[submodule "spring-mvc-autenticacao-com-spring-security-api-rest-e-ajax"]
+	path = spring-mvc-autenticacao-com-spring-security-api-rest-e-ajax
+	url = git@github.com:lucianodacunha/spring-mvc-autenticacao-com-spring-security-api-rest-e-ajax.git
+[submodule "certificacao-java"]
+	path = certificacao-java
+	url = git@github.com:lucianodacunha/certificacao-java.git
