@@ -10,3 +10,9 @@
 [submodule "certificacao-java"]
 	path = certificacao-java
 	url = git@github.com:lucianodacunha/certificacao-java.git
+[submodule "boas-praticas-de-programacao-automatizando-testes-com-java"]
+	path = boas-praticas-de-programacao-automatizando-testes-com-java
+	url = git@github.com:lucianodacunha/boas-praticas-de-programacao-automatizando-testes-com-java.git
+[submodule "boas-praticas-de-programacao-melhore-o-codigo-de-uma-api-java"]
+	path = boas-praticas-de-programacao-melhore-o-codigo-de-uma-api-java
+	url = git@github.com:lucianodacunha/boas-praticas-de-programacao-melhore-o-codigo-de-uma-api-java.git
